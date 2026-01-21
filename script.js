@@ -6,14 +6,7 @@ function login() {
         document.getElementById("loginBox").style.display = "none";
         document.getElementById("shopBox").style.display = "block";
     } else {
-        document.getElementById("loginMsg").innerText = "Invalid login!";
+        msg.innerText = "invalid username or password";
+        msg.style.color = "red"
     }
-}
-
-let cartItems = [];
-
-function addCart(item) {
-    cartItems.push(item);
-    document.getElementById("cart").innerText =
-        "Cart Items: " + cartItems.join(", ");
 }
