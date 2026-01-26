@@ -1,48 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
+ <!DOCTYPE html>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Shopping Website</title>
-    <link rel="stylesheet" href="style.css">
+  <title>Create Account</title>
 </head>
 <body>
 
-<!-- LOGIN SECTION -->
-<div class="login-box" id="loginBox">
-    <h2>Login</h2>
-    <input type="text" id="username" placeholder="Username">
-    <input type="password" id="password" placeholder="Password">
-    <button onclick="login()">Login</button>
-    <p id="loginMsg"></p>
-</div>
+  <h2>Create Account</h2>
 
-<!-- SHOPPING SECTION -->
-<div class="shop" id="shopBox">
-    <h1>🛒 My Shopping Store</h1>
+  <form onsubmit="return createAccount()">
+    <label>Name:</label><br>
+    <input type="text" id="name"><br><br>
 
-    <div class="products">
-        <div class="card">
-            <h3>Mobile</h3>
-            <p>₹15,000</p>
-            <button onclick="addCart('Mobile')">Add to Cart</button>
-        </div>
+    <label>Phone Number:</label><br>
+    <input type="text" id="phone"><br><br>
 
-        <div class="card">
-            <h3>Laptop</h3>
-            <p>₹45,000</p>
-            <button onclick="addCart('Laptop')">Add to Cart</button>
-        </div>
+    <label>Email:</label><br>
+    <input type="text" id="email"><br><br>
 
-        <div class="card">
-            <h3>Headphones</h3>
-            <p>₹2,000</p>
-            <button onclick="addCart('Headphones')">Add to Cart</button>
-        </div>
-    </div>
+    <button type="submit">Create Account</button>
+  </form>
 
-    <h3 id="cart"></h3>
-</div>
+  <p id="message"></p>
 
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
