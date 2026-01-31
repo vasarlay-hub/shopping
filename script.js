@@ -1,4 +1,20 @@
- document.getElementById("userForm").addEventListener("submit", function(event) {
+const states = [
+ "andhra pradesh"
+ "telagana"
+ "tamil naidu"
+ "benguluru"
+"kerala"
+];
+const stateselect =
+ document.getElementById("state");
+states.forEach(state => {
+ const option =
+  docement.createElement("option");
+ option.value = state;
+ option.textContent = state;
+ stateSelect.appendChild(option);
+});
+document.getElementById("userForm").addEventListener("submit", function(event) {
     event.preventDefault();
 
     const userData = {
@@ -17,5 +33,6 @@
     
     document.getElementById("userForm").reset();
 });
+
 
 
